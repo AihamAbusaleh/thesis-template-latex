@@ -1,0 +1,99 @@
+
+\documentclass[a4paper,12pt,headsepline]{scrartcl}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+% Inhaltsverzechnis mit Punkten
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% deutsche Silbentrennung
+\usepackage[ngerman, english]{babel}
+
+% Umlaute unter UTF8 nutzen
+\usepackage[utf8]{inputenc}
+
+% Zeichenencoding
+\usepackage[T1]{fontenc}
+
+\usepackage{lmodern}
+\usepackage{fix-cm}
+
+\usepackage[numbers]{natbib}
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+ 
+% mehrseitige Tabellen ermöglichen
+\usepackage{longtable}
+
+% Packet für Seitenrandabständex und Einstellung für Seitenränder
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2cm, top=2.5cm, bottom=3cm}
+
+
+% bricht lange URLs "schoen" um
+\usepackage[hyphens,obeyspaces,spaces]{url}
+
+% Paket für Textfarben
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+
+% Mathematische Symbole importieren
+\usepackage{amssymb}
+
+% für Tabellen
+\usepackage{array}
+
+\bibliographystyle{plain}
+
+% Schaltet den zusätzlichen Zwischenraum ab, den LaTeX normalerweise nach einem Satzzeichen einfügt.
+\frenchspacing
+
+% Paket für Zeilenabstand
+\usepackage{setspace}
+
+% für Listings
+\usepackage{listings}
+\usepackage{listingsutf8}
+  % lstlisting Einstellungen 
+\lstset{ 
+  tabsize=2, 
+    backgroundcolor=\color{lightgray}, 
+  showspaces=false, 
+  showstringspaces=false, 
+  float=[htb], 
+  captionpos=b, 
+  basicstyle=\footnotesize, 
+  frame=tbrl, %t: top, r, b, l 
+  frameround=tttt, 
+  numbers=left, 
+  numberstyle=\tiny, 
+  numberblanklines=false, 
+   frame=single,
+    breaklines=true,
+ }   
+
+
+% Abkürzungsverzeichnis
+\usepackage[intoc]{nomencl}
+\let\abk\nomenclature
+\renewcommand{\nomname}{List of Abbreviations}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomlabelwidth}{7cm}
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+% Disable single lines at the start of a paragraph (Schusterjungen)
+\clubpenalty = 10000
+% Disable single lines at the end of a paragraph (Hurenkinder)
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+

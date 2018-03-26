@@ -1,0 +1,145 @@
+% include alle pakete 
+\include{init}
+
+% -----------------------------------------------------------------%
+% -----------------------------------------------------------------%
+% --------------------------DOCUMENT-------------------------------%
+% -----------------------------------------------------------------%
+% -----------------------------------------------------------------%
+
+
+\begin{document}
+
+ 
+\include{cover}
+ % 1.5 facher Zeilenabstand
+\onehalfspacing
+
+
+\pagestyle{plain}
+\setcounter{page}{0}
+\pagenumbering{roman}
+
+% Sperrvermerk
+\input{blocking}
+\cleardoublepage
+\phantomsection
+
+%  Abstract
+\include{abstract}
+% einfacher Zeilenabstand
+
+\cleardoublepage
+\phantomsection
+
+\doublespacing
+\tableofcontents
+\singlespacing
+\cleardoublepage
+\phantomsection
+
+% Korrigiert Nummerierung bei mehrseitigem Inhaltsverzeichnis
+\newcounter{frontmatterpage}
+\setcounter{frontmatterpage}{\value{page}}
+
+
+% Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\cleardoublepage
+\phantomsection
+
+
+
+
+% Tableverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+\cleardoublepage
+\phantomsection
+
+
+
+
+% Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Listings}
+%\fancyhead[L]{Abbildungs- / Tabellen- / Listingverzeichnis} %Kopfzeile links
+%\renewcommand{\lstlistlistingname}{Listingverzeichnis}
+\lstlistoflistings
+%\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
+\cleardoublepage
+\phantomsection
+
+
+% Abkürzungsverzeichnis
+\input{abbreviations}
+\printnomenclature
+\cleardoublepage
+\phantomsection
+
+% 1,5 facher Zeilenabstand 
+\onehalfspacing
+
+% Nummerierung 1 , 2, 4 .. ab hier 
+\setcounter{page}{0}
+\pagenumbering{arabic}
+
+
+
+\addcontentsline{toc}{section}{Introduction}
+\input{introduction}
+\clearpage
+
+% Ab hier KOpfzeile einsetzen 
+\pagestyle{fancy}
+\lhead{\slshape \rightmark}
+\chead{}
+\rhead{\slshape \leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+
+
+%%%%%%% einzelne Kapitels %%%%%%%%%%%%
+
+\input{1_kap1}
+\cleardoublepage
+\phantomsection
+
+\input{2_kap2}
+\cleardoublepage
+\phantomsection
+ 
+ 
+ 
+%....
+
+\input{7_summary}
+\cleardoublepage
+\phantomsection
+
+\input{8_conclusion}
+\cleardoublepage
+\phantomsection
+
+\newpage
+%%%%%%%%%%%%%%%%%% Literaturen %%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{References}
+\bibliography{mainbib}
+\cleardoublepage
+\phantomsection
+
+\newpage
+\addcontentsline{toc}{section}{Appendix}
+\input{appendix}
+\cleardoublepage
+\phantomsection
+
+\newpage
+\addcontentsline{toc}{section}{Statutory Declaration}
+\include{declaration}
+\cleardoublepage
+\phantomsection
+
+\thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
+\section*{ }
+
+\end{document}
