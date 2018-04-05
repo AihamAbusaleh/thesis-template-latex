@@ -1,5 +1,5 @@
 % include alle pakete 
-\include{init}
+\include{def/init}
 
 % -----------------------------------------------------------------%
 % -----------------------------------------------------------------%
@@ -11,7 +11,7 @@
 \begin{document}
 
  
-\include{cover}
+\include{def/cover}
  % 1.5 facher Zeilenabstand
 \onehalfspacing
 
@@ -21,7 +21,7 @@
 \pagenumbering{roman}
 
 % Sperrvermerk
-\input{blocking}
+\input{def/blocking}
 \cleardoublepage
 \phantomsection
 
@@ -72,7 +72,7 @@
 
 
 % Abkürzungsverzeichnis
-\input{abbreviations}
+\input{def/abbreviations}
 \printnomenclature
 \cleardoublepage
 \phantomsection
@@ -100,11 +100,11 @@
 
 %%%%%%% einzelne Kapitels %%%%%%%%%%%%
 
-\input{1_kap1}
+\input{chapters/1_chapter}
 \cleardoublepage
 \phantomsection
 
-\input{2_kap2}
+\input{chapters/2_chapter}
 \cleardoublepage
 \phantomsection
  
@@ -129,13 +129,13 @@
 
 \newpage
 \addcontentsline{toc}{section}{Appendix}
-\input{appendix}
+\input{def/appendix}
 \cleardoublepage
 \phantomsection
 
 \newpage
 \addcontentsline{toc}{section}{Statutory Declaration}
-\include{declaration}
+\include{def/declaration}
 \cleardoublepage
 \phantomsection
 
