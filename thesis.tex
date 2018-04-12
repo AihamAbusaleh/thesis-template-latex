@@ -20,6 +20,10 @@
 \setcounter{page}{0}
 \pagenumbering{roman}
 
+\input{def/Acknowledgments}
+\cleardoublepage
+\phantomsection
+
 % Sperrvermerk
 \input{def/blocking}
 \cleardoublepage
@@ -123,9 +127,12 @@
 \newpage
 %%%%%%%%%%%%%%%%%% Literaturen %%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{section}{References}
-\bibliography{mainbib}
+ 
+\printbibliography
+
 \cleardoublepage
 \phantomsection
+
 
 \newpage
 \addcontentsline{toc}{section}{Appendix}

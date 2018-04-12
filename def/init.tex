@@ -20,8 +20,25 @@
 \usepackage{lmodern}
 \usepackage{fix-cm}
 
-\usepackage[numbers]{natbib}
-
+%\usepackage[numbers]{natbib}
+\usepackage[backend=bibtex,
+				 sorting=none,
+                natbib=true, 
+                style=numeric,
+                indexing=false,
+                citereset=none,
+                isbn=true,
+                url=true,
+                doi=true   
+                ]{biblatex}
+\addbibresource{mainbib.bib}
+% to change format of the urldate in biblatex 
+\DeclareFieldFormat{urldate}{%
+  \thefield{urlday}\adddot\addspace%
+  \mkbibmonth{\thefield{urlmonth}}\adddot\addspace%
+  \thefield{urlyear}\isdot}
+  
+  
 %Kopf- und Fußzeile
 \usepackage{fancyhdr}
  
@@ -34,7 +51,7 @@
 
 
 % bricht lange URLs "schoen" um
-\usepackage[hyphens,obeyspaces,spaces]{url}
+%\usepackage[hyphens,obeyspaces,spaces]{url}
 
 % Paket für Textfarben
 \usepackage{xcolor}
@@ -43,6 +60,9 @@
     colorlinks=true, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
     linkcolor=blue,  %choose some color if you want links to stand out
+       urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue
 }
 
 
@@ -52,7 +72,7 @@
 % für Tabellen
 \usepackage{array}
 
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
 
 % Schaltet den zusätzlichen Zwischenraum ab, den LaTeX normalerweise nach einem Satzzeichen einfügt.
 \frenchspacing
