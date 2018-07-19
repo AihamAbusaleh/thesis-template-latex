@@ -2,11 +2,14 @@
 \documentclass[a4paper,12pt,headsepline]{scrartcl}
 
 \usepackage{graphicx}
+\usepackage{subcaption} 
 
-
+\usepackage{adjustbox}
+\usepackage[table]{xcolor} 
 % Inhaltsverzechnis mit Punkten
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage{enumerate}
 
 % deutsche Silbentrennung
 \usepackage[english]{babel}
@@ -19,7 +22,8 @@
 
 \usepackage{lmodern}
 \usepackage{fix-cm}
-
+ \usepackage{booktabs}
+ \usepackage{longtable}
 %\usepackage[numbers]{natbib}
 \usepackage[backend=bibtex,
 				 sorting=none,
@@ -65,6 +69,9 @@
             anchorcolor = blue
 }
 
+ \usepackage{tcolorbox}
+
+
 
 % Mathematische Symbole importieren
 \usepackage{amssymb}
@@ -83,7 +90,7 @@
 % für Listings
 \usepackage{listings}
 \usepackage{listingsutf8}
-  % lstlisting Einstellungen 
+  % lstlisting Einstellungen für Anhänge wie Datei code
 \lstset{ 
   tabsize=2, 
     backgroundcolor=\color{lightgray}, 
@@ -100,7 +107,20 @@
    frame=single,
     breaklines=true,
  }   
-
+  % lstlisting Einstellungen für Code im Document
+\lstdefinestyle{Bash}
+{	language=Bash,
+backgroundcolor=\color{lightgray},
+keywordstyle=\color{BlueViolet}\bfseries,
+commentstyle=\color{yellow},
+stringstyle=\color{Red},
+showstringspaces=false,
+basicstyle=\small\color{black},
+numbers=none,
+captionpos=b,
+tabsize=4,
+breaklines=true
+}
 
 % Abkürzungsverzeichnis
 \usepackage[intoc]{nomencl}
@@ -117,3 +137,4 @@
 \widowpenalty = 10000
 \displaywidowpenalty = 10000
 
+\newcolumntype{g}{>{\columncolor{gray}}c}
