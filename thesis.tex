@@ -29,6 +29,13 @@
 \cleardoublepage
 \phantomsection
 
+
+\newpage
+%\addcontentsline{toc}{section}{Declaration of Authorship}
+\include{def/declaration}
+\cleardoublepage
+\phantomsection
+
 %  Abstract
 \include{abstract}
 % einfacher Zeilenabstand
@@ -103,6 +110,9 @@
 
 
 %%%%%%% einzelne Kapitels %%%%%%%%%%%%
+\input{chapters/0_chapter}
+\cleardoublepage
+\phantomsection
 
 \input{chapters/1_chapter}
 \cleardoublepage
@@ -112,8 +122,13 @@
 \cleardoublepage
 \phantomsection
  
+\input{chapters/3_chapter}
+\cleardoublepage
+\phantomsection
  
- 
+  \input{chapters/4_chapter}
+\cleardoublepage
+\phantomsection
 %....
 
 \input{7_summary}
@@ -140,11 +155,6 @@
 \cleardoublepage
 \phantomsection
 
-\newpage
-\addcontentsline{toc}{section}{Statutory Declaration}
-\include{def/declaration}
-\cleardoublepage
-\phantomsection
 
 \thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
 \section*{ }
